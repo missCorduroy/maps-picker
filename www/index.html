@@ -7,7 +7,7 @@
     <script type="text/javascript" src="cordova.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/common.css" />
     <link rel="stylesheet" type="text/css" href="./css/index.css" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' gap:; script-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; object-src *; style-src 'self' data: 'unsafe-inline' *; img-src 'self' data:; media-src 'self' data:; font-src 'self' data:; connect-src *">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' gap:; script-src 'self' data: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; object-src *; style-src 'self' data: 'unsafe-inline' *; img-src 'self' data:; media-src 'self' data:; font-src 'self' data:; connect-src *">
 </head>
 
 <body>
@@ -19,6 +19,14 @@
         <div id="contentsFrame" style="padding-top:100px">
             <h2>Classes</h2>
             <table class="reference">
+                <tr>
+                    <th>
+                        <a onclick="var options = {date: new Date(),mode: 'date'}; window.datePicker.show(options, function onSuccess(date) {alert('Selected date: ' + date);}, function() {  alert('DatePicker Error')})">
+                            DatePicker
+                        </a>
+                    </th>
+                    <td>Display the DatePicker.</td>
+                </tr>
                 <tr>
                     <th><a href="./Map/index.html">aaaaa</a></th>
                     <td>Generate a map instance using <span class="highlight">plugin.google.maps.getMap()</span>.</td>
